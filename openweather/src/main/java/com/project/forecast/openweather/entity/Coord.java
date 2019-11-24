@@ -1,35 +1,22 @@
 package com.project.forecast.openweather.entity;
 
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "id",
         "lon",
-        "lat",
+        "lat"
 })
-public class Coordinate {
-
-    @JsonProperty("id")
-    private int id;
+public class Coord {
 
     @JsonProperty("lon")
     private double lon;
 
     @JsonProperty("lat")
     private double lat;
-
-    @JsonProperty("id")
-    public int getId() {
-        return id;
-    }
-
-    @JsonProperty("id")
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @JsonProperty("lon")
     public double getLon() {
